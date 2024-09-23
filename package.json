@@ -3,10 +3,37 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm --filter @apps/* dev",
+    "build": "pnpm --filter @apps/* build",
+    "preview": "pnpm --filter @apps/* preview",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@arco-design/web-vue": "^2.56.2",
+    "@vueuse/core": "^11.1.0",
+    "vue": "^3.5.6"
+  },
+  "devDependencies": {
+    "@core/tailwindcss": "workspace:^",
+    "@core/vite-base-config": "workspace:^",
+    "@eslint/js": "^9.11.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "autoprefixer": "^10.4.20",
+    "cz-git": "^1.9.4",
+    "eslint": "^9.11.0",
+    "eslint-plugin-vue": "^9.28.0",
+    "globals": "^15.9.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "postcss": "^8.4.47",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1",
+    "tailwindcss": "^3.4.12",
+    "vite": "^5.4.6"
+  }
 }
