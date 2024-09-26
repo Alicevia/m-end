@@ -1,5 +1,7 @@
 {
   "recommendations": [
-    "vue.volar"
+    "vue.volar",
+    "stylelint.vscode-stylelint",
+    "dbaeumer.vscode-eslint"
   ]
 }

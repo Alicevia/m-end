@@ -8,7 +8,8 @@
     "dev": "pnpm --filter @apps/* dev",
     "build": "pnpm --filter @apps/* build",
     "preview": "pnpm --filter @apps/* preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commit": "git-cz"
   },
   "keywords": [],
   "author": "",
@@ -22,17 +23,19 @@
     "@core/tailwindcss": "workspace:^",
     "@core/vite-base-config": "workspace:^",
     "@eslint/js": "^9.11.0",
+    "@stylistic/eslint-plugin-js": "^2.8.0",
     "@vitejs/plugin-vue": "^5.1.4",
     "autoprefixer": "^10.4.20",
-    "cz-git": "^1.9.4",
     "eslint": "^9.11.0",
     "eslint-plugin-vue": "^9.28.0",
     "globals": "^15.9.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
-    "postcss": "^8.4.47",
     "stylelint": "^16.9.0",
-    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-recommended-less": "^3.0.1",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-order": "^6.0.4",
     "tailwindcss": "^3.4.12",
     "vite": "^5.4.6"
   }
