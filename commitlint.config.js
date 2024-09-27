@@ -37,7 +37,10 @@ export default {
     useAI: false,
     aiNumber: 1,
     themeColorCode: '',
-    scopes: [],
+    scopes: [
+      { name: '协同', value: 'coop' },
+      { name: '案例', value: 'case' },
+    ],
     allowCustomScopes: true,
     allowEmptyScopes: true,
     customScopesAlign: 'bottom',
@@ -48,7 +51,7 @@ export default {
     allowBreakingChanges: ['feat', 'fix'],
     breaklineNumber: 100,
     breaklineChar: '|',
-    skipQuestions: ['body', 'footer', 'footerPrefix', 'customFooterPrefix', 'customScope', 'breaking'],
+    skipQuestions: ['body', 'footer', 'footerPrefix', 'customFooterPrefix',  'breaking'],
     issuePrefixes: [
       // 如果使用 gitee 作为开发管理
       { value: 'link', name: 'link:     链接 ISSUES 进行中' },
