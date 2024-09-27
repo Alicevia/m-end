@@ -33,4 +33,5 @@ const obj = {
 }
 const b = 231
 const a = computed(() => 3)
+console.log('x')
 </script>
