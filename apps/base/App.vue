@@ -33,6 +33,6 @@ const obj = {
 }
 const b = 231
 const a = computed(() => 3)
-console.log('23322')
+console.log('232')
 
 </script>
