@@ -99,18 +99,6 @@ importers:
 
   core/vite-base-config: {}
 
-  core/vite-config: {}
-
-  packages/a-project: {}
-
-  packages/b-project: {}
-
-  packages/base:
-    dependencies:
-      wujie-vue3:
-        specifier: ^1.0.22
-        version: registry.npmmirror.com/wujie-vue3@1.0.22(vue@3.5.6)
-
 packages:
 
   registry.npmmirror.com/@alloc/quick-lru@5.2.0:
