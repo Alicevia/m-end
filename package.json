@@ -9,7 +9,7 @@
     "build": "pnpm --filter @apps/* build",
     "preview": "pnpm --filter @apps/* preview",
     "prepare": "husky",
-    "commit": " npx  --no-install  lint-staged  && cz" 
+    "cz": " npx  --no-install  lint-staged  && cz" 
   },
   "keywords": [],
   "author": "",
