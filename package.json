@@ -9,8 +9,7 @@
     "build": "pnpm --filter @apps/* build",
     "preview": "pnpm --filter @apps/* preview",
     "prepare": "husky",
-    "commit": "git-cz",
-    "cz":"cz"
+    "commit": "git-cz" 
   },
   "keywords": [],
   "author": "",
