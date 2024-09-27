@@ -33,5 +33,5 @@ const obj = {
 }
 const b = 231
 const a = computed(() => 3)
-const c = 23
+const c = 232323
 </script>
