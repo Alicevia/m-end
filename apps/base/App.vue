@@ -33,35 +33,3 @@ const obj = {
 }
 const a = computed(() => 3)
 </script>
-<style scoped lang="less">
-@link-color:#428bca; 
-
-@link-color-hover:darken(@link-color, 10%);
-// Variables
-@my-selector: banner;
-
-// Usage
-.@{my-selector}
-
- {
-  margin: 0 auto;
-  font-weight: bold;
-  line-height: 40px;
-}
-
-.container {
-  display: block;
-  width: 100px;
-  color:@link-color;
-  .child {
-    height: 100px;
-
-  }
-}
-
-.a {
-  display: flex;
-}
-
- 
-</style>
