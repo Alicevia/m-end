@@ -20,12 +20,17 @@
     "vue": "^3.5.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@core/tailwindcss": "workspace:^",
     "@core/vite-base-config": "workspace:^",
     "@eslint/js": "^9.11.0",
     "@stylistic/eslint-plugin-js": "^2.8.0",
     "@vitejs/plugin-vue": "^5.1.4",
     "autoprefixer": "^10.4.20",
+    "commitizen": "^4.3.0",
+    "cz-customizable": "^7.2.1",
+    "cz-git": "^1.9.4",
     "eslint": "^9.11.0",
     "eslint-plugin-vue": "^9.28.0",
     "globals": "^15.9.0",
@@ -38,5 +43,10 @@
     "stylelint-order": "^6.0.4",
     "tailwindcss": "^3.4.12",
     "vite": "^5.4.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   }
 }
