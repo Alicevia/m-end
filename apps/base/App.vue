@@ -31,6 +31,6 @@ const obj = {
   2: 'fs', 
   a: 1, 
 }
-const b = 23
+const b = 231
 const a = computed(() => 3)
 </script>
