@@ -1,19 +1,25 @@
 <template>
-	<div>
-		<div class="">app</div>
-		<ul>
-			<li v-for="(item,) in list" :key="item.name">
-				<a @click="current = item">{{ item.name }}
+	<AppContainer>
+		<template #empty>
+			kong
+		</template>
+		<div>
+			<ul>
+				<li v-for="(item,) in list" :key="item.name">
+					<a @click="current = item">{{ item.name }}
 
-				</a>
-			</li>
-		</ul>
-		<WujieVue :name="current.name" :url="current.url"></WujieVue>
-	</div>
+					</a>
+				</li>
+			</ul>
+			<WujieVue :name="current.name" :url="current.url"></WujieVue>
+		</div>
+	</AppContainer>
+ 
 </template>
 
 <script setup>
 import { ref, computed, reactive } from 'vue'
+import { AppContainer } from '@core/components'
 import WujieVue from 'wujie-vue3'
 const list = [
   {

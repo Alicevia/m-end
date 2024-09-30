@@ -2,12 +2,13 @@ import globals from 'globals'
 import pluginJs from '@eslint/js'
 import pluginVue from 'eslint-plugin-vue'
 import stylisticJs from '@stylistic/eslint-plugin-js'
- 
+import stylisticJsx from '@stylistic/eslint-plugin-jsx'
 export default [
   {
     files: ['**/*.{js,mjs,cjs,jsx,vue}'],
     plugins: {
-      stylisticJs, 
+      '@stylistic/js': stylisticJs,
+      '@stylistic/jsx': stylisticJsx,
     },
     rules: {
       ...pluginJs.configs.recommended.rules,
@@ -39,8 +40,8 @@ export default [
       'no-console': ['error', {
         allow: ['warn', 'error'], 
       }], 
-      'stylisticJs/array-bracket-spacing': ['error', 'never'],
-      'stylisticJs/array-bracket-newline': ['error', 'consistent'],
+      '@stylistic/js/array-bracket-spacing': ['error', 'never'],
+      '@stylistic/js/array-bracket-newline': ['error', 'consistent'],
       // 'stylisticJs/object-curly-newline': ['error',  
       //   {
       //     ObjectExpression: 'always',
@@ -52,8 +53,20 @@ export default [
       //       multiline: true, minProperties: 3, 
       //     }, 
       //   }], 
-      'stylisticJs/object-curly-spacing': ['error', 'always'], 
+      '@stylistic/js/object-curly-spacing': ['error', 'always'], 
     }, 
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+          tsx: true,
+        },
+        ecmaVersion: 2020,
+        useJSXTextNode: true,
+        sourceType: 'module',
+      },
+    },
+ 
   },
   ...pluginVue.configs['flat/essential'],
   {

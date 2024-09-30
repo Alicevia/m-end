@@ -1,13 +1,10 @@
 {
-  "name": "@apps/b-project",
+  "name": "@core/project-setup",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "dev": "vite --port 5175",
-    "build": "vite  build",
-    "preview": "vite  preview"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",

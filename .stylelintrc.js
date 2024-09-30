@@ -8,6 +8,8 @@ export default {
     'stylelint-declaration-block-no-ignored-properties',
   ],
   rules: {
+    'at-rule-no-unknown': null,
+    'no-empty-source': null,
     'plugin/declaration-block-no-ignored-properties': true,
     'order/properties-order': [
       'position',
