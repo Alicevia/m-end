@@ -17,6 +17,7 @@
   "dependencies": {
     "@arco-design/web-vue": "^2.56.2",
     "@core/components": "workspace:^",
+    "@core/composable": "workspace:^",
     "@vueuse/core": "^11.1.0",
     "vue": "^3.5.6"
   },

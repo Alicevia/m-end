@@ -10,7 +10,6 @@
     "experimentalDecorators": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
-    "types": ["/apps/openx-a/components.d.ts"]
     // "paths": {
     //   "@/*": ["./src/*"]
     // }

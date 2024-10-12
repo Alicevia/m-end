@@ -9,9 +9,9 @@ export default defineConfig({
     
     vue(),
     vueJsx(),
-    // vitePluginForArco({
-    //   style: 'css',
-    // }),
+    vitePluginForArco({
+      style: 'css',
+    }),
     Components({
       resolvers: [ArcoResolver({ importStyle: true })],
     }),

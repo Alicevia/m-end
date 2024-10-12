@@ -1,10 +1,13 @@
 @import url('./tailwindcss.css');
 
-.a {
-	display: block;
+ body,html,#app {
+  height: 100%;
+  line-height: 1.2;
+ }
 
-  
-}
-
+ #app{
+  color: var(	--color-text-1);
+  background-color: var(--color-bg-1);
+ }
  
 
