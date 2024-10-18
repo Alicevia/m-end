@@ -48,7 +48,7 @@ export const useWujieMainAppColorMode = (wujie, options) => {
 }
 export const useWujieSubAppColorMode = (options) => {
   const appColorMode = useAppColorMode(options)
-  const colorMode= globalThis.$wujie?.props.colorMode
+  const colorMode= globalThis.$wujie?.props?.colorMode
   if(colorMode){
     appColorMode.store.value = colorMode
     globalThis.$wujie.bus.$on(UPDATE_COLOR_MODE, (v) => {

@@ -7,13 +7,15 @@
 		</a-button>
 		<template #content>
 			<a-doption >个人中心</a-doption>
-			<a-doption >退出登录</a-doption>
+			<a-doption @click="logout">退出登录</a-doption>
 		</template>
 	</a-dropdown>
 </template>
 
 <script setup>
- 
+const props = defineProps({
+  logout: Function,
+})
 </script>
 <style scoped>
 </style>
