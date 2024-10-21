@@ -1,44 +1,42 @@
 <template>
-	<AppConfigProvider>
-		<a-layout  class="h-full">
-			<a-layout-header class="">
-				<a-page-header
-					:show-back="false"
-					title="Openx"
-					subtitle="openx-front-team">
-					<template #extra>
-						<a-space>
-							<AppColorMode :appColorMode="appColorMode"></AppColorMode>
-							<AppUserCenter :logout="logout"></AppUserCenter>
-						</a-space>
-					</template>
-				</a-page-header>
-			</a-layout-header>
-			<a-layout>
-				<a-layout-sider style="width:49px;">
-					<a-menu :selectedKeys="selectedKeys" :collapsed="true" :onMenuItemClick="onMenuItemClick">
-						<a-menu-item v-for="(item,) in list" :key="item.name">
-							<template #icon><icon-apps></icon-apps></template>
-							{{ item.name }}
-						</a-menu-item>
-					</a-menu>
-				</a-layout-sider>
-				<a-layout-content>
-					<router-view v-slot="{ Component }">
-						<component :is="Component" ></component>
-					</router-view>
-				</a-layout-content>
-			</a-layout>
-			<!-- <a-layout-footer class=" text-center">
-			</a-layout-footer> -->
+	<a-layout  class="h-full">
+		<a-layout-header class="">
+			<a-page-header
+				:show-back="false"
+				title="Openx"
+				subtitle="openx-front-team">
+				<template #extra>
+					<a-space>
+						<AppColorMode :appColorMode="appColorMode"></AppColorMode>
+						<AppUserCenter :logout="logout"></AppUserCenter>
+					</a-space>
+				</template>
+			</a-page-header>
+		</a-layout-header>
+		<a-layout>
+			<a-layout-sider style="width:49px;">
+				<a-menu :selectedKeys="selectedKeys" :collapsed="true" :onMenuItemClick="onMenuItemClick">
+					<a-menu-item v-for="(item,) in list" :key="item.name">
+						<template #icon><icon-apps></icon-apps></template>
+						{{ item.name }}
+					</a-menu-item>
+				</a-menu>
+			</a-layout-sider>
+			<a-layout-content>
+				<router-view v-slot="{ Component }">
+					<component :is="Component" ></component>
+				</router-view>
+			</a-layout-content>
 		</a-layout>
-	</AppConfigProvider>
+		<!-- <a-layout-footer class=" text-center">
+			</a-layout-footer> -->
+	</a-layout>
  
 </template>
 
 <script setup>
 import { reactive, computed } from 'vue'
-import { AppConfigProvider, AppColorMode, AppUserCenter } from '@core/components'
+import { AppColorMode, AppUserCenter } from '@core/components'
 import { useAppColorModeStore, useUserStore } from '../store'
 import { useRouter } from 'vue-router'
 import { useRoute } from 'vue-router'

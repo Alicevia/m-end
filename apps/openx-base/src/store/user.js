@@ -5,14 +5,15 @@ export const useUserStore = createGlobalState(() => {
 
   const isLogin = ref(false)
   const isLoading = ref(false)
+  const refreshLoading=ref(false)
   const token = useStorage('openx-token')
-
+  const setToken = v => {
+    token.value = v
+  }
   const login = async () => {
     isLoading.value = true
     try {
-      await getToken()
-      await getGlobalData()
-      isLogin.value = true
+      await fetchToken()
     }catch(e){
       token.value = undefined
       return Promise.reject(e)
@@ -21,12 +22,13 @@ export const useUserStore = createGlobalState(() => {
     }
   }
  
-  const getToken =async () => {
+  const fetchToken =async () => {
     await new Promise(r => setTimeout(r, 1000))
     token.value = 'test-token'
   }
   const validateToken =async () => {
-    isLoading.value = true
+    refreshLoading.value = true
+    tip.value = '正在初始化数据...'
     try {
       await getGlobalData()
       isLogin.value = true
@@ -34,7 +36,7 @@ export const useUserStore = createGlobalState(() => {
       token.value = undefined
       return Promise.reject(error)
     }finally{
-      isLoading.value = false
+      refreshLoading.value = false
     }
   }
   const getGlobalData = async () => {
@@ -47,5 +49,28 @@ export const useUserStore = createGlobalState(() => {
     router.replace('/login')
   }
   
-  return { isLogin, isLoading, token, login, validateToken, logout }
+  const tip =  ref('正在初始化数据...')
+  const ssoLogin = async (vk) => {
+    refreshLoading.value = true
+    tip.value = '正在核验身份...'
+    try {
+      await new Promise(r => setTimeout(r, 2000))
+      setToken('sso-token')
+      router.replace('/')
+    } finally{
+      refreshLoading.value = false
+    }
+    
+  }
+  return {
+    isLogin, 
+    isLoading, 
+    refreshLoading,
+    tip, 
+    token,
+    setToken,
+    login,
+    ssoLogin,
+    validateToken, 
+    logout }
 })

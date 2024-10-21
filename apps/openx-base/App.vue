@@ -1,13 +1,16 @@
 <template>
-	<a-spin class="h-full w-full" tip="正在加载数据..." dot
-		:loading="isLoading">
-		<router-view></router-view>
-	</a-spin>
+	<AppConfigProvider>
+		<a-spin class="h-full w-full " :tip="tip" dot
+			:loading="refreshLoading">
+			<router-view></router-view>
+		</a-spin>
+	</AppConfigProvider>
 </template>
 <script setup>
 import { useUserStore } from './src/store'
-
-
-const { isLoading } = useUserStore()
+import { AppConfigProvider   } from '@core/components'
+import { useAppColorModeStore   } from './src/store'
+useAppColorModeStore()
+const { refreshLoading, tip } = useUserStore()
 
 </script>

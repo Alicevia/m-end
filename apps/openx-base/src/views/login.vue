@@ -25,6 +25,7 @@
 import { reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useUserStore } from '../store'
+
 const { isLoading, login } = useUserStore()
 const formRef  = ref()
 const form = reactive({
@@ -35,7 +36,7 @@ const form = reactive({
 const router = useRouter()
 const handleSubmit = async (data) => {
   await login()
-  router.push('/')
+  router.replace('/')
 }
 </script>
 <style scoped>

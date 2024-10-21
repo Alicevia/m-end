@@ -37,8 +37,9 @@ export default {
     aiNumber: 1,
     themeColorCode: '',
     scopes: [
-      { name: '协同', value: 'coop' },
-      { name: '案例', value: 'case' },
+      { name: '登录', value: 'login' },
+      { name: '新模块', value: 'module' },
+      { name: '颜色模式', value: 'color' },
     ],
     allowCustomScopes: true,
     allowEmptyScopes: true,
